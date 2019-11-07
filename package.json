@@ -1,0 +1,24 @@
+{
+  "name": "docker-node-express-tutorial",
+  "version": "1.0.0",
+  "description": "Docker-izing a NodeJS ExpressJS API - Tutorial from TutorialEdge",
+  "main": "index.js",
+  "scripts": {
+    "audit": "npm audit --registry=https://registry.npmjs.org",
+    "start": "nodemon index.js",
+    "test": "npm run test",
+    "docker:buit ild": "docker build -t node-docker-tutorial .",
+    "docker:run": "docker run -it -p 9000:3000 node-docker-tutorial",
+    "docker:run:detached": "docker run -d -p 9000:3000 node-docker-tutorial",
+    "docker:run:volume": "docker run -it -p 9001:3000 -v ${pwd}:/app node-docker-tutorial"
+  },
+  "author": "TutorialEdge (modified by BH)",
+  "license": "ISC",
+  "pre-commit": [
+    "precommit-msg"
+  ],
+  "dependencies": {
+    "nodemon": "^1.19.4",
+    "express": "^4.17.1"
+  }
+}

@@ -1,0 +1,8 @@
+*.log
+/dist
+node_modules/
+node_modules
+**/.DS_Store
+/stats
+/reports
+*.version.txt
